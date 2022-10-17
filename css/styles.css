@@ -224,7 +224,7 @@ body {
   #lead {
     position: relative;
     height: 100vh;
-    min-height: 500px;
+    min-height: 937px;
     max-height: 1080px;
     background: url(../images/lead-bg.jpg);
     background-size: cover;
@@ -238,6 +238,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-bottom: 40px;
   }
   #lead-content h1,
   #lead-content h2 {
@@ -737,6 +738,9 @@ body {
       font-size: 0.9em;
       padding: 5px 10px;
     }
+    #lead {
+      padding-bottom: 100px;
+    }
   }
 
   /*! PERSONAL */
@@ -756,5 +760,53 @@ body {
   .utl{
     max-width: 100%;
     max-height: 100%; 
+  }
+
+   /*! boton*/
+  input, #slider, #bar1, label{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: white;
+    font-family: consolas;
+  }
+  input{
+    visibility: hidden;
+  }
+  #bar1{
+
+    height: 50px;
+        width: 80px;
+        border: 3px solid teal;
+        border-radius: 45px;
+        top: 30vh;
+        cursor: pointer;
+        margin: auto;  
+        margin-bottom: 50px;
+  }
+  label{
+    background-color: teal;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    left: -25px;
+    top : 1px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  input:checked + label{
+    transform: translateX(29px);
+  }
+  label::before{
+    content: "OFF";
+    position: relative;
+    top: 10px;
+  }
+  input:checked + label::before{
+    content: "ON";
+    position: relative;
+    top: 10px;
   }
 
